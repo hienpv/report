@@ -39,7 +39,7 @@ export class DialogComponent implements OnInit {
     }
     this.reportService.getdata({
       reportId: this.reportId,
-      userId: this.month,
+      month: this.month,
     }).then(body => {
       this.createComponentFromRaw(body.reportContent, body);
       console.log(body);

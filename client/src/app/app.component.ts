@@ -1,7 +1,4 @@
 import { Component, OnInit, ViewChild, ViewContainerRef, ComponentRef, Compiler, Injector, NgModuleRef, NgModule } from '@angular/core';
-import { ReportService } from './service/report.service';
-import { CommonModule } from '@angular/common';
-import { PipeModule } from './pipe/pipe.module';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { DialogComponent } from './dialog/dialog.component';
 @Component({
