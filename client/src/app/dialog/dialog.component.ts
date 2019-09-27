@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild, ViewContainerRef, ComponentRef, Compiler, Injector, NgModuleRef, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ReportService } from '../service/report.service';
 import { PipeModule } from '../pipe/pipe.module';
 import * as jsPDF from 'jspdf';
@@ -38,8 +37,8 @@ export class DialogComponent implements OnInit {
       this.cmpRef.destroy();
     }
     this.reportService.getdata({
-      reportId: this.reportId,
-      month: this.month,
+      reportId: 1,
+      month: 1,
     }).then(body => {
       this.createComponentFromRaw(body.reportContent, body);
       console.log(body);
@@ -84,13 +83,13 @@ export class DialogComponent implements OnInit {
 
   htmltoPDF() {
     // parentdiv is the html element which has to be converted to PDF
-    html2canvas(document.querySelector("#report")).then(canvas => {
+    html2canvas(document.querySelector(".report")).then(canvas => {
 
       var pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
 
       var imgData = canvas.toDataURL("image/jpeg", 10.0);
-      //pdf.addImage(imgData, 0, 0, canvas.width, canvas.height);
-      pdf.html(canvas);
+      pdf.addImage(imgData, 0, 0, canvas.width, canvas.height);
+      //pdf.html(canvas);
       pdf.save('converteddoc.pdf');
 
     });
