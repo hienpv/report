@@ -1,0 +1,17 @@
+table, td, th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.report-footer .column {
+    float: left;
+    width: 50%;
+    text-align: center;
+  }
+  
+  /* Clear floats after the columns */
+.report-footer{
+    width: 100%;
+    display: table;
+    clear: both;
+}
