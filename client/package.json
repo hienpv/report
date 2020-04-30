@@ -22,7 +22,7 @@
     "@ng-bootstrap/ng-bootstrap": "^5.1.1",
     "bootstrap": "^4.3.1",
     "html2canvas": "^1.0.0-rc.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jspdf": "^1.5.3",
     "ngx-dynamic-compiler": "^1.0.9",
     "ngx-print": "^1.2.0-beta.3",
